@@ -1,24 +1,12 @@
-import { nouns } from './nouns.mjs';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-function randomPhrase(count, list) {
-  let phrase = '';
-  for (let i = 0; i<count; i++) {
-    phrase += list[getRandomInt(list.length)]+' ';
-  }
-  return phrase;
-}
+import { phraser } from './phraser.mjs';
 
 function init() {
-  var output = document.querySelector('output');
+  var output = document.querySelector('h1');
 
-  output.value = randomPhrase(2, nouns);
+  output.innerText = phraser.generate(2);
 
   document.querySelector('body').addEventListener('click', function(){
-    output.value = randomPhrase(2, nouns);
+    output.innerText = phraser.generate(2);
   });
 }
 
