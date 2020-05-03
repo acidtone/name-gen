@@ -1,0 +1,86 @@
+:root {
+  --hue: 0;
+  --lum: 50%;
+  --sat: 100%;
+}
+
+body {
+  --hue-deflect1: 0;
+  --hue-deflect2: 0;
+  --hue-deflect3: 0;
+  --hue-deflect4: 0;
+}
+
+body.comp {
+  --hue-deflect2: 180;
+}
+
+body.triadic {
+  --hue-deflect2: 120;
+  --hue-deflect3: 240;
+}
+
+body.split-comp {
+  --hue-deflect2: 150;
+  --hue-deflect3: 210;
+}
+
+body.tetradic {
+  --hue-deflect2: 60;
+  --hue-deflect3: 180;
+  --hue-deflect4: 240;
+}
+
+body.analog {
+  --hue-deflect2: 30;
+  --hue-deflect3: 60;
+  --hue-deflect4: 90;
+}
+
+body {
+  --auto-hue2: calc(var(--hue) + var(--hue-deflect2, 0));
+  --auto-hue3: calc(var(--hue) + var(--hue-deflect3, 0));
+  --auto-hue4: calc(var(--hue) + var(--hue-deflect4, 0));
+
+  --clr1: hsl(var(--hue), var(--sat), var(--lum));
+  --clr2: hsl(var(--auto-hue2), var(--sat), var(--lum));
+  --clr3: hsl(var(--auto-hue3), var(--sat), var(--lum));
+  --clr4: hsl(var(--auto-hue4), var(--sat), var(--lum));
+}
+
+.pretty-light {
+  --lum: 90%;
+}
+.light {
+  --lum: 75%;
+}
+.kinda-light {
+  --lum: 60%;
+}
+
+.medium {
+  --lum: 50%;
+}
+.kinda-dark {
+  --lum: 40%;
+}
+.dark {
+  --lum: 25%;
+}
+.pretty-dark {
+  --lum: 10%;
+}
+
+.saturated {
+  --sat: 100%;
+}
+.washed {
+  --sat: 66%;
+}
+.muted {
+  --sat: 33%;
+}
+.gray {
+  --sat: 0%;
+}
+

@@ -7,15 +7,19 @@
   <title>Product Name Generator</title>
   <script type="module" src="js/app.mjs"></script>
   <link rel="stylesheet" href="css/fonts/roboto-cabin.css">
+  <link rel="stylesheet" href="css/colour.css">
   <style>
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
 
+      background-color: hsl(var(--hue,0), var(--sat,100%), 93%);
+      color: hsl(var(--hue,0), var(--sat,100%), 20%);
+
       font-size: clamp(96px, 15vw, 128px);
       text-transform: capitalize;
-      /* font-variant: small-caps; */
+      font-variant: small-caps;
 
       display: flex;
     }
