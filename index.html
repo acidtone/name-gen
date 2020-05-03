@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Product Name Generator</title>
+  <title>Random Band Name Generator</title>
   <script type="module" src="js/app.mjs"></script>
   <link rel="stylesheet" href="css/fonts/roboto-cabin.css">
   <link rel="stylesheet" href="css/colour.css">
@@ -17,7 +15,10 @@
       background-color: hsl(var(--hue,0), var(--sat,100%), 93%);
       color: hsl(var(--hue,0), var(--sat,100%), 20%);
 
-      font-size: clamp(96px, 15vw, 128px);
+      /* Ugh, Safari */
+      font-size: 15vmin;
+
+      font-size: clamp(96px, 15vmin, 128px);
       text-transform: capitalize;
       font-variant: small-caps;
 
@@ -25,10 +26,12 @@
     }
 
     h1 {
+      font-size: 1em;
       text-align: center;
       font-weight: normal;
+
       margin: auto;
-      font-size: 1em;
+      padding: 10vmin;
     }
 
   </style>
