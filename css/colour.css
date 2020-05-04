@@ -17,6 +17,7 @@
   --sat-washed: 66%;
   --sat-muted: 33%;
   --sat-pale: 10%;
+  
 }
 
 body {
@@ -52,9 +53,9 @@ body[data-clr-harmony="analog"] {
 }
 
 body {
-  --auto-hue2: calc(var(--hue) + var(--hue-deflect2, 0));
-  --auto-hue3: calc(var(--hue) + var(--hue-deflect3, 0));
-  --auto-hue4: calc(var(--hue) + var(--hue-deflect4, 0));
+  --auto-hue2: calc(var(--hue) + var(--hue2-deflect, 0));
+  --auto-hue3: calc(var(--hue) + var(--hue3-deflect, 0));
+  --auto-hue4: calc(var(--hue) + var(--hue4-deflect, 0));
 
   --auto-clr1: hsl(var(--hue), var(--sat), var(--lum));
   --auto-clr2: hsl(var(--auto-hue2), var(--sat), var(--lum));
