@@ -1,15 +1,15 @@
 import { phraser } from './phraser.mjs';
-import { colur } from './colur.mjs';
+import { colour } from './colour.mjs';
 
 function init() {
-  var output = document.querySelector('h1');
+  var h1 = document.querySelector('h1');
 
-  output.innerText = phraser.generate(2);
-  colur.setRandomHue();
+  h1.innerText = phraser.generate(2);
+  colour.setRandomHue();
 
   document.querySelector('body').addEventListener('click', function(){
-    output.innerText = phraser.generate(2);
-    colur.setRandomHue();
+    h1.innerText = phraser.generate(2);
+    colour.setRandomHue();
   });
 }
 

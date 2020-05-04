@@ -1,4 +1,4 @@
-export const colur = {
+export const colour = {
   setRandomHue:  function() {
     document.querySelector(':root').style.setProperty('--hue',Math.floor(Math.random() * Math.floor(360)));
   }
