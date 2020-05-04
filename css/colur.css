@@ -11,27 +11,27 @@ body {
   --hue-deflect4: 0;
 }
 
-body.comp {
+body[data-clr-harmony="comp"] {
   --hue-deflect2: 180;
 }
 
-body.triadic {
+body[data-clr-harmony="triadic"] {
   --hue-deflect2: 120;
   --hue-deflect3: 240;
 }
 
-body.split-comp {
+body[data-clr-harmony="split-comp"] {
   --hue-deflect2: 150;
   --hue-deflect3: 210;
 }
 
-body.tetradic {
+body[data-clr-harmony="tetradic"] {
   --hue-deflect2: 60;
   --hue-deflect3: 180;
   --hue-deflect4: 240;
 }
 
-body.analog {
+body[data-clr-harmony="analog"] {
   --hue-deflect2: 30;
   --hue-deflect3: 60;
   --hue-deflect4: 90;
@@ -50,25 +50,31 @@ body {
 
 .pretty-light {
   --lum: 90%;
+  --lum-pretty-light: var(--lum);
 }
 .light {
-  --lum: 75%;
+  --lum: 80%;
+  --lum-light: var(--lum);
 }
 .kinda-light {
-  --lum: 60%;
+  --lum: 70%;
+  --lum-kinda-light: var(--lum);
 }
 
 .medium {
   --lum: 50%;
 }
 .kinda-dark {
-  --lum: 40%;
+  --lum: 30%;
+  --lum-kinda-dark: var(--lum);
 }
 .dark {
-  --lum: 25%;
+  --lum: 20%;
+  --lum-dark: var(--lum);
 }
 .pretty-dark {
   --lum: 10%;
+  --lum-pretty-dark: var(--lum);
 }
 
 .saturated {

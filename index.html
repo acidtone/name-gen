@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Band Name Generator</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script type="module" src="js/app.mjs"></script>
+
+  <link rel="stylesheet" href="css/colur.css">
   <link rel="stylesheet" href="css/fonts/roboto-cabin.css">
-  <link rel="stylesheet" href="css/colour.css">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
-      height: 70vh;
+      height: 100vh;
 
       background-color: hsl(var(--hue,0), var(--sat,100%), 93%);
       color: hsl(var(--hue,0), var(--sat,100%), 20%);
 
-      /* Ugh, Safari */
-      font-size: 15vmin;
-
+      font-size: 15vmin; /* Ugh. IE, Safari... Safari!?! */
       font-size: clamp(96px, 15vmin, 128px);
+
       text-transform: capitalize;
       font-variant: small-caps;
 
@@ -33,11 +39,17 @@
 
       margin: auto;
       padding: 10vmin;
+
+      border-width: 2vmin;
+      border-style: solid;
     }
 
+    h1 {
+      border-color: hsl(var(--auto-hue2, 0), var(--sat), var(--lum));
+    }
   </style>
 </head>
-<body>
-  <h1></h1>
+<body data-clr-harmony="triadic">
+  <h1 class="kinda-light"></h1>
 </body>
 </html>
