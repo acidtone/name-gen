@@ -13,43 +13,56 @@
 
   <style>
     * {
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
+    
     body {
+      --lum-super-light: 97%;
+
+      --clr-hbg: hsl(var(--hue), var(--sat-muted), var(--lum-super-light));
+      --clr-h: hsl(var(--hue), var(--sat), var(--lum-very-dark));
+      --clr-border: hsl(var(--auto-hue2), var(--sat-washed), var(--lum-kinda-light));
+
       margin: 0;
-      padding: 0;
-      height: 100vh;
-
-      background-color: hsl(var(--hue,0), var(--sat,100%), 93%);
-      color: hsl(var(--hue,0), var(--sat,100%), 20%);
-
-      font-size: 15vmin; /* Ugh. IE, Safari... Safari!?! */
-      font-size: clamp(96px, 15vmin, 128px);
-
-      text-transform: capitalize;
-      font-variant: small-caps;
+      padding: 0 5vmin;
+      min-height: 100vh;
 
       display: flex;
-    }
 
+      font-size: 8vmin; /* Ugh. IE, Safari... Safari!?! */
+      font-size: clamp(5vmin, 8vmin, 64px);
+
+      text-transform: capitalize;
+    }
+    
+    main {
+      display: flex;
+      margin: auto;
+    }
+    
     h1 {
-      font-size: 1em;
+      font-variant: small-caps;
       text-align: center;
       font-weight: normal;
-
+      
+      border-color: var(--clr-border);
+      background-color: var(--clr-hbg);
+      color: var(--clr-h);
+      
       margin: auto;
       padding: 10vmin;
 
       border-width: 2vmin;
       border-style: solid;
+      
     }
-
-    h1 {
-      border-color: hsl(var(--auto-hue2, 0), var(--sat), var(--lum));
-    }
+    
   </style>
 </head>
-<body data-clr-harmony="triadic">
-  <h1 class="kinda-light"></h1>
+<body data-clr-harmony="comp">
+  <main>
+    <h1></h1>
+  </main>
 </body>
 </html>

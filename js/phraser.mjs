@@ -7,6 +7,7 @@ export const phraser = {
     for (let i = 0; i < wordCount; i++) {
       phrase.push(this.nouns[(Math.floor(Math.random() * Math.floor(this.nouns.length)))]);
     }
+    
     if (asArray) {
       return phrase;
     } else {
