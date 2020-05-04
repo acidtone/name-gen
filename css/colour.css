@@ -28,16 +28,20 @@ body {
 
 body[data-clr-harmony="comp"] {
   --hue2-deflect: 180;
+  --hue3-deflect: 180;
+  --hue4-deflect: 180;
 }
 
 body[data-clr-harmony="triadic"] {
   --hue2-deflect: 120;
   --hue3-deflect: 240;
+  --hue4-deflect: 240;
 }
 
 body[data-clr-harmony="split-comp"] {
   --hue2-deflect: 150;
   --hue3-deflect: 210;
+  --hue4-deflect: 210;
 }
 
 body[data-clr-harmony="tetradic"] {
