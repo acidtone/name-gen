@@ -8,7 +8,6 @@ function init() {
   h1.innerText = phraser.generate(2);
   colour.setRandomHue();
 
-
   h1.addEventListener('click', function(){
     this.innerText = phraser.generate(2);
     colour.setRandomHue();
