@@ -1,4 +1,5 @@
 export const colour = {
+  // TODO: Deprecate this module. Does anything need to be saved?
   init: function(templateId) {
     templateId = templateId || false;
     

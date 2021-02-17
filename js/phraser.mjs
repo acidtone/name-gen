@@ -1,5 +1,6 @@
 export const phraser = {
   generate: function(wordCount,asArray) {
+    // TODO: Move default values to the parameters
     wordCount = wordCount || 2;
     asArray = asArray || false;
 
@@ -7,13 +8,18 @@ export const phraser = {
     for (let i = 0; i < wordCount; i++) {
       phrase.push(this.nouns[(Math.floor(Math.random() * Math.floor(this.nouns.length)))]);
     }
-    
+    // TODO: Remove this feature? It's not used at the moment.
     if (asArray) {
       return phrase;
     } else {
       return phrase.join(' '); 
     }
   },
+
+  // TODO: Add support for adjectives: 
+  // Multiple adjectives: https://www.gingersoftware.com/content/grammar-rules/adjectives/order-of-adjectives/
+
+  // TODO: Move this to its own module.
   nouns: [
     "bush",
     "shovel",
