@@ -2,12 +2,21 @@ import { phraser } from './phraser.mjs';
 import { colour } from './colour.mjs';
 
 
-var h1 = document.querySelector('h1');
+// Toggle for adjectives
+let adj; 
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('adjectives') == 'true') {
+  adj = true;
+} else {
+  adj = false;
+}
 
-h1.innerText = phraser.generate(2);
+var container = document.querySelector('.phrase');
+
+container.innerHTML = phraser.generate(2, adj);
 colour.setRandomHue();
 
-h1.addEventListener('click', function(){
-  this.innerText = phraser.generate(2);
+container.addEventListener('click', function(){
+  this.innerHTML = phraser.generate(2, adj);
   colour.setRandomHue();
 });
